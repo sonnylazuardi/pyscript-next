@@ -1,8 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 export default (req, res) => {
-  const body = JSON.parse(req.body);
-
   res.status(200).send(`
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +14,7 @@ export default (req, res) => {
 </head>
 <body>
 <py-script>
-${body.code}
+${req.body.code}
 </py-script>
 </body>
 </html>
